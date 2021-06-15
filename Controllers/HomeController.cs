@@ -25,28 +25,7 @@ namespace PC4.Controllers
             return View();
         }
 
-        public IActionResult IndexNC()
-        {
-            return View();
-        }
-
         public IActionResult Privacy()
-        {
-            return View();
-        }
-        public IActionResult EditarProducto()
-        {
-            return View();
-        }
-        public IActionResult HuertodelValle()
-        {
-            return View();
-        }
-        public IActionResult Producto()
-        {
-            return View();
-        }
-         public IActionResult QuienesSomos()
         {
             return View();
         }
