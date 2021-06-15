@@ -1,0 +1,31 @@
+@model IEnumerable<PC4.Models.Datos>
+@{
+    ViewData["Title"] = "Reclamos";
+}
+<body style="background-image: url(../img/Reclamo.jpg); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-color: #66999;">  
+<div class="text-center" style="margin-top: 50px;">
+    <h1 class="p-3 mb-2 bg-info text-white" class="display-4">Subir Fail:</h1>
+</div>
+
+<div  class="container">
+
+<div asp-validation-summary="All"></div>
+
+@foreach (var datos in Model)
+        { 
+            <span class="border border-warning">
+            <div class="col-lg-4" >
+                <div class="card" style="width: 18rem; margin-bottom: 20px;">
+                        <div class="card-body" style="text-align: center; margin-top: 10px;">
+                            <h5 class="card-title">@datos.titulo</h5>
+                        </div>
+                        <ul class="list-group list-group-flush" >
+                            <li class="list-group-item"><strong>Usuario: </strong>@datos.usuario</li>
+                        </ul>
+                        <img src="@datos.url_foto" class="card-img-top">
+                </div>
+            </div>
+            </span>
+        }
+</div>
+</body>

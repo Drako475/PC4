@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Crear cuenta de usuario</h1>
+<form method="POST">
+    <div class="form-group">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Apellido:</label>
+        <input type="text" name="apellido" class="form-control" required>
+    </div>
+    <div asp-validation-summary="All"></div>
+    <div class="form-group">
+        <label>Correo:</label>
+        <input type="email" name="email" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Contraseña:</label>
+        <input type="password" name="password" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Edad:</label>
+        <input type="number" name="edad" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label>Telefono:</label>
+        <input type="tel" name="telefono" class="form-control" required>
+    </div>
+    <button class="btn btn-primary">Crear Cuenta</button>
+</form>
