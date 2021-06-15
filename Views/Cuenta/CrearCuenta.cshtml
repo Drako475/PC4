@@ -1,8 +1,12 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<h1>Crear cuenta de usuario</h1>
-<form method="POST">
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body style="background-image: url(../img/Log.jpg); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-color: #66999;"> 
+<h1 style="color: #ffff;">Crear cuenta de usuario</h1>
+<form method="POST" style="color: #ffff;">
     <div class="form-group">
         <label>Nombre:</label>
         <input type="text" name="nombre" class="form-control" required>
@@ -29,4 +33,5 @@
         <input type="tel" name="telefono" class="form-control" required>
     </div>
     <button class="btn btn-primary">Crear Cuenta</button>
-</form>
+</form>    
+</body>

@@ -59,16 +59,6 @@ namespace PC4.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-
-    [HttpPost]
-        public IActionResult Eliminar(int id)
-        {
-            var reclamos = _context.Datos.FirstOrDefault(r => r.id == id);
-            _context.Remove(reclamos);
-            _context.SaveChanges();
-            return RedirectToAction("DatoUsuarios");
-        }
         
 [AllowAnonymous]
         public IActionResult DatoUsuarios()
