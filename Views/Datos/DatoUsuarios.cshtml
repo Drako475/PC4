@@ -10,7 +10,8 @@
 <div  class="container">
 
 <div asp-validation-summary="All"></div>
-
+<div style="margin-top: 30px;" >
+    <div class="row">
 @foreach (var datos in Model)
         { 
             <span class="border border-warning">
@@ -27,5 +28,7 @@
             </div>
             </span>
         }
+</div>
+</div>
 </div>
 </body>

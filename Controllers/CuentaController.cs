@@ -21,7 +21,7 @@ namespace PC4.Controllers
         public IActionResult IniciarSesion(string usuario, string password){
            var resultado = _sim.PasswordSignInAsync(usuario, password, false, false).Result;
            if (resultado.Succeeded){
-               return RedirectToAction("Index", "Home");
+               return RedirectToAction("DatoUsuarios", "Datos");
            }else{
            ModelState.AddModelError("", "Los datos son incorrectos");
             return View();
