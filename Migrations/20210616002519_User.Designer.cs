@@ -10,7 +10,7 @@ using PC4.Data;
 namespace PC4.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210615230826_User")]
+    [Migration("20210616002519_User")]
     partial class User
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -213,6 +213,26 @@ namespace PC4.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("PC4.Models.Anonimo", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("Id")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<DateTime>("addDate")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("comentario")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("id");
+
+                    b.ToTable("t_datosAnonimos");
                 });
 
             modelBuilder.Entity("PC4.Models.Datos", b =>

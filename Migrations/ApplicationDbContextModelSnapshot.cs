@@ -213,6 +213,26 @@ namespace PC4.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("PC4.Models.Anonimo", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("Id")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<DateTime>("addDate")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("comentario")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("id");
+
+                    b.ToTable("t_datosAnonimos");
+                });
+
             modelBuilder.Entity("PC4.Models.Datos", b =>
                 {
                     b.Property<int>("id")
